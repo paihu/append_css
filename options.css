@@ -1,0 +1,60 @@
+.tab-radio{
+display: none;
+}
+
+#tab-url:checked ~ #pane #pane-url{
+max-height: initial;
+opacity: 1;
+z-index:100;
+}
+
+#tab-css:checked ~ #pane #pane-css{
+max-height: initial;
+opacity: 1;
+z-index:100;
+}
+
+#tab-url:checked ~ #tab-list #li-pane-url{
+color: black;
+background-color: white;
+}
+#tab-css:checked ~ #tab-list #li-pane-css{
+color: black;
+background-color: white;
+}
+
+
+#tab-list{
+display:flex;
+list-style: none;
+}
+#tab-list li{
+display: flex;
+position: relative;
+border-style: solid;
+border-width: 1px 1px 0 0;
+background-color: gray;
+color: white;
+}
+#tab-list li label{
+padding: 0 10px;
+}
+#tab-list li:first-child{
+border-width: 1px 1px 0 1px;
+}
+
+
+
+section{
+box-sizing: border-box;
+max-height:0;
+opacity: 0;
+z-index:0;
+width : 90%;
+overflow-y: hidden;
+}
+
+textarea{
+width: 80%;
+height: 50em;
+}

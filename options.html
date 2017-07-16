@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>options</title>
+<script src="options.js"></script>
+<link rel="stylesheet" type="text/css" href="options.css" />
+</head>
+<body>
+<input type="radio" class="tab-radio" name="tab-radio" id="tab-url" checked>
+<input type="radio" class="tab-radio" name="tab-radio" id="tab-css">
+
+<ul id="tab-list">
+  <li id="li-pane-url"><label class="panel-label" for="tab-url">URL</label></li>
+  <li id="li-pane-css"><label class="panel-label" for="tab-css">CSS</label></li>
+</ul>
+<article id="pane">
+  <section id="pane-url">
+    <main>
+    <button id="url-add" type="add">追加</button>
+    </main>
+  </section>
+  <section id="pane-css">
+    <main>
+    名前
+    <input id="css-name" type="text"></input>
+    <button id="css-add" type="add">追加</button>
+    <form id="css">
+    <select name="css"></select>
+    <button type="reset">リセット</button>
+    <button type="submit">保存</button>
+    <button id="delete-css" type="button">削除</button><br>
+    <textarea></textarea>
+    </form>
+    </main>
+  </section>
+</article>
+
+</body>
+</html>

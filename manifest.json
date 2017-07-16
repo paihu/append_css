@@ -1,0 +1,21 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Append CSS",
+  "description": "Custom CSS Append for WebSites",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+    "matches": ["http://*/*","https://*/*"],
+    "js": ["append_css.js"]
+    }
+  ],
+  "options_ui":{
+    "page": "options.html",
+    "chrome_style": false,
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage"
+  ]
+}
