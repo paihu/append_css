@@ -2,6 +2,7 @@
   // Required
   "manifest_version": 2,
   "name": "Append CSS",
+  "default_locale": "en",
   "description": "Custom CSS Append for WebSites",
   "version": "1.0.0",
   "content_scripts": [

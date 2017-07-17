@@ -1,0 +1,14 @@
+{
+  "add":{
+    "message":"add"
+  },	
+  "reset":{
+    "message":"reset"
+  },
+  "delete":{
+    "message":"delete"
+  },
+  "save":{
+    "message":"save"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "add":{
+    "message":"追加"
+  },	
+  "reset":{
+    "message":"リセット"
+  },
+  "delete":{
+    "message":"削除"
+  },
+  "save":{
+    "message":"保存"
+  }
+}

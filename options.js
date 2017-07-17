@@ -4,8 +4,24 @@ document.addEventListener("DOMContentLoaded",function(){
   document.querySelector("#url-add").addEventListener("click",addUrl,true);
   document.querySelector("#css-add").addEventListener("click",addCss,true);
   document.querySelector("#css").addEventListener("submit",submitCss,true);
-  document.querySelector("#delete-css").addEventListener("click",removeCss,true);
+  document.querySelector("#css-delete").addEventListener("click",removeCss,true);
   document.querySelector("#pane-css select").addEventListener("change",getCss,true);
+  document.querySelector("#url-add").textContent = chrome.i18n.getMessage("add");
+  document.querySelector("#css-add").textContent = chrome.i18n.getMessage("add");
+  document.querySelector("#css-delete").textContent = chrome.i18n.getMessage("delete");
+  button = document.querySelectorAll("#css button");
+  for(n in Object.keys(button)){
+    if(button[n].hasAttribute("type")){
+      console.log(button[n].getAttribute("type"));
+    }
+    if(button[n].hasAttribute("type") && button[n].getAttribute("type")=="reset"){
+      button[n].textContent = chrome.i18n.getMessage("reset");
+    }
+    if(button[n].hasAttribute("type") && button[n].getAttribute("type")=="submit"){
+      button[n].textContent = chrome.i18n.getMessage("save");
+    }
+  }
+  
   createCssList();
 });
 
@@ -111,13 +127,13 @@ function newUrl(){
   }
   reset = document.createElement("button");
   reset.type="reset";
-  reset.innerHTML="リセット";
+  reset.innerHTML=chrome.i18n.getMessage("reset");
   submit = document.createElement("button");
   submit.type="submit";
-  submit.innerHTML="保存";
+  submit.innerHTML=chrome.i18n.getMessage("save");
   remove = document.createElement("button");
   remove.type="button";
-  remove.innerHTML="削除";
+  remove.innerHTML=chrome.i18n.getMessage("delete");
   form.appendChild(url);
   form.appendChild(css);
   form.appendChild(reset);
